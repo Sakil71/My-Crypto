@@ -23,5 +23,11 @@ export const router = createBrowserRouter([
                 element: <Coin></Coin>
             }
         ]
+    },
+    {
+        path : '*',
+        element: <div className="flex justify-center items-center w-full h-screen text-red-700 font-bold">
+            <h1>404 | page not found</h1>
+        </div>
     }
 ])

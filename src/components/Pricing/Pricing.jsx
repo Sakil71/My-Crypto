@@ -10,7 +10,7 @@ const Pricing = () => {
     }, [allCoin])
 
     return (
-        <div className="overflow-x-auto w-[95%] md:w-[80%] lg:w-[80%] my-20 mx-auto">
+        <div className="overflow-x-auto w-[98%] md:w-[80%] lg:w-[80%] my-20 mx-auto">
             <table className="table">
                 <thead>
                     <tr>
@@ -22,7 +22,7 @@ const Pricing = () => {
                 </thead>
                 <tbody>
                     {
-                        displayCoin.map((item, index) => <tr key={index}>
+                        displayCoin.slice(0, 20).map((item, index) => <tr key={index}>
                             <td>
                                 <Link to={`/coin/${item?.id}`} className="flex items-center gap-2">
                                     <img src={item?.image} className="w-8" alt="" />
