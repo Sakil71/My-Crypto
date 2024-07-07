@@ -5,6 +5,8 @@ export const CoinContext = createContext();
 // eslint-disable-next-line react/prop-types
 const CoinContextProvider = ({ children }) => {
     const [allCoin, setAllCoin] = useState([]);
+    const [displayCoin, setDisplayCoin] = useState([]);
+    const [input, setInput] = useState('');
     const [currency, setCurrency] = useState(
         {
             name: "usd",
@@ -29,7 +31,7 @@ const CoinContextProvider = ({ children }) => {
     }, [currency])
 
     const value = {
-        allCoin, currency, setCurrency
+        allCoin, currency, setCurrency, input, setInput, displayCoin, setDisplayCoin
     }
     return (
         <CoinContext.Provider value={value}>
