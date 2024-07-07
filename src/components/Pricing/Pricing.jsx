@@ -28,7 +28,7 @@ const Pricing = () => {
                                     <img src={item?.image} className="w-8" alt="" />
                                     <div>
                                         <h1 className="font-bold flex gap-2">{item?.name} -<p className="font-bold">{item?.symbol}</p></h1>
-                                        <p className="font-bold md:hidden lg:hidden">{currency.symbol}{item?.current_price}</p>
+                                        <p className={`font-bold md:hidden lg:hidden`}>{currency.symbol}{item?.current_price}</p>
                                     </div>
                                 </Link>
                             </td>

@@ -20,6 +20,10 @@ const Navbar = () => {
                 setCurrency({ name: 'eur', symbol: '€' });
                 break;
             }
+            case "bdt": {
+                setCurrency({ name: 'bdt', symbol: '৳' });
+                break;
+            }
             default: {
                 setCurrency({ name: 'usd', symbol: '$' });
                 break;
@@ -54,6 +58,7 @@ const Navbar = () => {
                 <select onChange={currencyHandler} name="" id="" className="border rounded font-medium outline-none text-sm">
                     <option className="text-sm" value="usd">USD</option>
                     <option className="text-sm" value="eur">EUR</option>
+                    <option className="text-sm" value="bdt">BDT</option>
                 </select>
 
                 <button className="border border-blue-950 rounded text-sm px-4 py-1 font-medium hover:bg-blue-950 hover:text-white">Sign Up</button>
